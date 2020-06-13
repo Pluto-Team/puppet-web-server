@@ -1,0 +1,1 @@
+Write-Host "##### INSTALLING WEB SERVER ROLE #####"
