@@ -9,3 +9,6 @@ choco install -y dotnetcore-windowshosting
 
 Write-Host "#### INSTALLING URL REWRITE"
 choco install -y urlrewrite
+
+Write-Host "#### INSTALLING JQ"
+choco install -y jq 
