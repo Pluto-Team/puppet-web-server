@@ -3,6 +3,6 @@
 Write-Host "###### STARTING WEB SERVER CONFIGURATION ######"
 
 # execute puppet module
-puppet apply --modulepath=C:\modules\ -e "include puppet_web_server"
+puppet apply --modulepath=C:\modules\ -e "include puppet_web_server" > web-server-setup.txt
 
 Write-Host "###### WEB SERVER CONFIGURATION COMPLETE ######"
