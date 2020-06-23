@@ -11,4 +11,7 @@ Write-Host "#### INSTALLING URL REWRITE"
 choco install -y urlrewrite
 
 Write-Host "#### INSTALLING JQ"
-choco install -y jq 
+choco install -y jq
+
+Write-Host "#### INSTALLING NOTEPAD PLUS PLUS"
+choco install -y notepadplusplus
