@@ -1,4 +1,4 @@
- # bring down a specific version of the application and deploy it to IIS
+  # bring down a specific version of the application and deploy it to IIS
 #Install-Module -Nam AWS.Tools.Common -Force -Verbose
 # Install-Module -Name AWS.Tools.EC2 -Force -Verbose
 
@@ -21,4 +21,4 @@ if( $webServerConsoleNameTag -eq "Candidate-tracker-Dev-Web-Server" ) {
 }
 
 else {
-}
+} 
