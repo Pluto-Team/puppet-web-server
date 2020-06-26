@@ -15,3 +15,6 @@ choco install -y jq
 
 Write-Host "#### INSTALLING NOTEPAD PLUS PLUS"
 choco install -y notepadplusplus
+
+Write-Host "#### INSTALL GOOGLE CHROME"
+choco install -y googlechrome
