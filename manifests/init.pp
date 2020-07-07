@@ -14,15 +14,15 @@ class puppet_web_server {
     logoutput => true,
   }
 
-  notice( '##### ADDING SERVER DEPENDENCIES #####' )
-  exec { 'add server dependencies':
-    command   => "${powershell} C:/modules/puppet_web_server/files/install-web-server-dependecies.ps1",
-    logoutput => true,
-  }
-
   notice( '##### INSTALL WEB SERVER FEATURE #####' )
   exec { 'Install Web Server feature':
     command   => "${powershell} C:/modules/puppet_web_server/files/install-web-server.ps1",
+    logoutput => true,
+  }
+
+  notice( '##### ADDING SERVER DEPENDENCIES #####' )
+  exec { 'add server dependencies':
+    command   => "${powershell} C:/modules/puppet_web_server/files/install-web-server-dependecies.ps1",
     logoutput => true,
   }
 
