@@ -16,7 +16,7 @@
  Write-Host "#### Bringing Down the application ####"
  if( $webServerConsoleNameTag -eq "Candidate-tracker-Dev-Web-Server" ) {
  
-     $targetGroupArn = "arn:aws:elasticloadbalancing:us-east-1:073247231803:targetgroup/dev-pluto-app-TG/9deed66e798a1354"
+     $targetGroupArn = "arn:aws:elasticloadbalancing:us-east-1:073247231803:targetgroup/dev-pluto-app-TG/0d45af832966ff2b"
      Write-Host "Registering to target group dev-pluto-app-TG"
      Write-Host "Target group ARN ----> " $targetGroupArn
     
