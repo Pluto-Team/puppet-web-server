@@ -26,6 +26,12 @@ class puppet_web_server {
     logoutput => true,
   }
 
+  notice( '##### ADDING SERVER ENVIRONMENT VARIABLES #####' )
+  exec { 'add server dependencies':
+    command   => "${powershell} C:/modules/puppet_web_server/files/setup-add-environment-variables.ps1",
+    logoutput => true,
+  }
+
   notice( '##### ADD SERVER TO TARGET GROUP #####' )
   exec { 'add Server Target group':
     command   => "${powershell} C:/modules/puppet_web_server/files/add-server-to-target-group.ps1",
