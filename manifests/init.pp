@@ -27,7 +27,7 @@ class puppet_web_server {
   }
 
   notice( '##### ADDING SERVER ENVIRONMENT VARIABLES #####' )
-  exec { 'add server dependencies':
+  exec { 'add server environment variables':
     command   => "${powershell} C:/modules/puppet_web_server/files/setup-add-environment-variables.ps1",
     logoutput => true,
   }
