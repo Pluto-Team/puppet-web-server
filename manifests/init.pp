@@ -37,4 +37,17 @@ class puppet_web_server {
     command   => "${powershell} C:/modules/puppet_web_server/files/deploy-app-to-IIS.ps1",
     logoutput => true,
   }
+
+  notice( '##### INSERTING LOGGING DIRECTORY #####' )
+  exec { 'Add logging directory':
+    command   => "${powershell} C:/modules/puppet_web_server/files/setup-log-folder.ps1",
+    logoutput => true,
+  }
+
+  file { 'C:\\inetpub\\wwwroot\\CandidateTracker\\web.config':
+    ensure => 'present',
+    owner  => 'Administrator',
+    group  => 'Administrators',
+    source => 'C:\\modules\\puppet_web_server\\files\\web.config'
+  }
 }

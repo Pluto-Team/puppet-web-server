@@ -15,7 +15,7 @@ Write-Host "The server console name tag is " $webServerConsoleNameTag
 Write-Host "#### Bringing Down the application ####"
 if( $webServerConsoleNameTag -eq "Candidate-tracker-Dev-Web-Server" ) {
     Write-Host "Bringing down Dev Branch of Candidate tracker"
-    aws s3 cp s3://pluto-app-artifact-store/Dev/PlutoApp-Dev/ C:\inetpub\wwwroot\PlutoApp\ --recursive
+    aws s3 cp s3://pluto-app-artifact-store/Dev/PlutoApp-Dev/ C:\inetpub\wwwroot\CandidateTracker\ --recursive
    
    # deploy the application to IIS with the correct web config
 }
@@ -23,5 +23,5 @@ if( $webServerConsoleNameTag -eq "Candidate-tracker-Dev-Web-Server" ) {
 else {
   Write-Host "Bringing down Test Branch of Candidate tracker"
   # bring down the most current version from the Test folder
-  aws s3 cp s3://pluto-app-artifact-store/Test/PlutoApp-Dev/ C:\inetpub\wwwroot\PlutoApp\ --recursive
+  aws s3 cp s3://pluto-app-artifact-store/Test/PlutoApp-Dev/ C:\inetpub\wwwroot\CandidateTracker\ --recursive
 } 
