@@ -1,1 +1,2 @@
-net stop was /y && net start w3svc i
+net stop was /y
+net start w3svc i
