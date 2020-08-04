@@ -50,10 +50,10 @@ class puppet_web_server {
     logoutput => true,
   }
 
-  file { 'C:\\inetpub\\wwwroot\\CandidateTracker\\web.config':
+  /** file { 'C:\\inetpub\\wwwroot\\CandidateTracker\\web.config':
     ensure => 'present',
     owner  => 'Administrator',
     group  => 'Administrators',
     source => 'C:\\modules\\puppet_web_server\\files\\web.config'
-  }
+  } **/
 }

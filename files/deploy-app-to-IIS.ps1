@@ -23,5 +23,7 @@ if( $webServerConsoleNameTag -eq "Candidate-tracker-Dev-Web-Server" ) {
 else {
   Write-Host "Bringing down Test Branch of Candidate tracker"
   # bring down the most current version from the Test folder
-  aws s3 cp s3://pluto-app-artifact-store/Test/PlutoApp-Dev/ C:\inetpub\wwwroot\CandidateTracker\ --recursive
-} 
+  aws s3 cp s3://pluto-app-artifact-store/Test/PlutoApp-Test/ C:\inetpub\wwwroot\CandidateTracker\ --recursive
+}
+
+aws s3 cp s3://server-standup-files-pluto-app/web-server/web.config C:\inetpub\wwwroot\CandidateTracker\ --recursive
