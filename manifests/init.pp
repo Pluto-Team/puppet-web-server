@@ -49,4 +49,10 @@ class puppet_web_server {
     command   => "${powershell} C:/modules/puppet_web_server/files/setup-log-folder.ps1",
     logoutput => true,
   }
+
+  notice( '##### SET FOLDER PERMISSIONS #####' )
+  exec { 'Set folder permissions':
+    command   => "${powershell} C:/modules/puppet_web_server/files/setup-setting-folder-permissions.ps1",
+    logoutput => true,
+  }
 }
