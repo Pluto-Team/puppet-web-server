@@ -1,4 +1,4 @@
-  # bring down a specific version of the application and deploy it to IIS
+   # bring down a specific version of the application and deploy it to IIS
 #Install-Module -Nam AWS.Tools.Common -Force -Verbose
 # Install-Module -Name AWS.Tools.EC2 -Force -Verbose
 
@@ -46,6 +46,9 @@ else {
   aws s3 cp s3://server-standup-files-pluto-app/web-server/candidate-tracker-app-pool.xml C:\file-drop\candidate-tracker-app-pool.xml
 }
 
+# workaround to pass powershell variables into command line commands
+$env:siteConfig = $websiteConfig
+
 Write-Host "#### IMPORTING IIS SITE CONFIG TO IIS "
-& "appcmd add apppool \"CandidateTracker\" /in < C:\file-drop\candidate-tracker-app-pool.xml"
-& "appcmd add site \"CandidateTracker\" /in < C:\file-drop\${websiteConfig}"
+cmd /c --% C:\Windows\System32\inetsrv\appcmd.exe add apppool /in < C:\file-drop\candidate-tracker-app-pool.xml
+cmd /c --% C:\Windows\System32\inetsrv\appcmd.exe add site /in < C:\file-drop\%siteConfig% 
