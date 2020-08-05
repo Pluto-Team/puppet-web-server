@@ -26,4 +26,5 @@ else {
   aws s3 cp s3://pluto-app-artifact-store/Test/PlutoApp-Test/ C:\inetpub\wwwroot\CandidateTracker\ --recursive
 }
 
+Write-Host "#### PULLING DOWN WEB.CONFIG #####"
 aws s3 cp s3://server-standup-files-pluto-app/web-server/web.config C:\inetpub\wwwroot\CandidateTracker\
